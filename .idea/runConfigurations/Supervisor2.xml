@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Supervisor2" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+    <deployment type="docker-image">
+      <settings>
+        <option name="command" value="storm supervisor" />
+        <option name="containerName" value="supervisor" />
+        <option name="entrypoint" value="" />
+        <option name="imageTag" value="storm:latest" />
+        <option name="commandLineOptions" value=" -d --restart always  --network kafka-net  --link storm_zookeeper:zookeeper --link nimbus_kafkanet:nimbus " />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

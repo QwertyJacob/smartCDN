@@ -1,0 +1,22 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Topology" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+    <deployment type="docker-image">
+      <settings>
+        <option name="command" value="storm jar /smartCDN/target/smartCDN-1.0-SNAPSHOT.jar topologies.ExclamationTopology topology" />
+        <option name="containerName" value="topology" />
+        <option name="entrypoint" value="" />
+        <option name="imageTag" value="storm:latest" />
+        <option name="commandLineOptions" value=" -it -rm  --network kafka-net --link nimbus_kafkanet:nimbus " />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/smartCDN" />
+              <option name="hostPath" value="C:\Users\Jesus\IdeaProjects\smartCDN" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
